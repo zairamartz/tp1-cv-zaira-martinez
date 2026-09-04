@@ -86,9 +86,6 @@ body {
     gap: 40px;
     list-style: none;
     width: 100%;
-    padding: 0;
-    margin: 0;
-    /* aca tuve que volver a repetir padding: 0; margin: 0; porque sino toda la lista arrancaba con una pequena sangria, y no quedaba alineado a la izquierda como el parrafo anterior. no se si asi estara bien resuelto */
 }
 
 .contacto li {
@@ -106,19 +103,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+    width: 100%;
     margin-top: 10px;
 }
 
-.botonera ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    width: 100%;
-    list-style: none;
-}
-
-.botonera ul li a {
+.botonera a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,7 +118,7 @@ body {
     font-size: 14px;
     border-radius: 25px;
     text-decoration: none;
-    padding: 0 20px;
+    padding: 0px 20px;
     background-color: #D8D0F5;
     color: #6B5B95;
 }
@@ -159,7 +149,6 @@ main {
 }
 
 .principal article {
-    background-color: #F8F0FA;
     padding: 10px;
 }
 
@@ -176,8 +165,7 @@ h3 {
     font-size: 12px;
 }
 
-ul {
-    padding-left: 20px;
+.principal article ul {
     list-style: none;
 }
 
@@ -200,7 +188,7 @@ footer {
     padding: 15px 0;
 }
 
-footer .redes {
+.redes {
     display: flex;
     gap: 30px;
     list-style: none;
@@ -208,7 +196,7 @@ footer .redes {
     padding: 0;
 }
 
-footer .redes a {
+.redes a {
     text-decoration: none;
     color: #D8D0F5;
     font-weight: 700;
