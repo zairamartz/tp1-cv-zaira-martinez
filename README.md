@@ -1,5 +1,5 @@
-# CV Zaira Martínez
-Este es el primer trabajo práctico para la materia Computación III, UNLa. Consistió en realizar mi CV utilizando HTML y CSS.
+# PORTFOLIO Zaira Martínez
+Esta es la actualizacion de mi CV a mi Portfolio, realizada para la materia Computación III, UNLa. Consistió en realizarlo utilizando HTML y CSS, y a bocetarlo en Figma.
 
 ## Detalles técnicos:
 * Editor de código: Visual Studio Code
