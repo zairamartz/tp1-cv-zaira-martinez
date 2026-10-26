@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto | Zai Martínez</title>
+        <link href="estilos.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="images/iconiposa.ico">
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html" class="logo"> <img src="images/logo-header.png" alt="Zaira"></a>
+
+             <nav>
+                <a href="sobre-mi.html">Sobre mí</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="contacto.html" class="activo">Contacto</a>
+            </nav>
+        </header>
+
+        <main class="contacto-main">
+        <!-- Section 1: Video con efecto multiply y texto -->
+            <section class="contacto-video-box">
+                <video autoplay muted loop playsinline class="video-contacto">
+                    <source src="images/contacto/video-contacto.mp4" type="video/mp4">
+                </video>
+                <div class="contacto-texto-overlay">
+                    <h2>¡Hablemos!</h2>
+                    <p>Si te gustó lo que viste, hablemos y contame lo que estés buscando &lt;3</p>
+                </div>
+            </section>
+
+        <!-- Section 2: Formulario de contacto -->
+            <section class="contacto-form-box">
+                <h3>Escribime tu idea:</h3>
+            <form action="#" method="POST">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nombre y Apellido *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Teléfono *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="E-mail *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Asunto *" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <textarea placeholder="Escribe tu mensaje aquí *" rows="5" required></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-footer">
+                    <p class="campos-obligatorios">*Campos obligatorios</p>
+                    <button type="submit" class="btn-enviar">ENVIAR</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+        <footer class="footer">
+            <p class="copyright">Todos los derechos reservados. 2026 ©</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/zai.martz/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/zaira-martz" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.behance.net/zairamartnez1" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+                    <img src="images/behance.png" alt="Behance">
+                </a>
+            </div>
+    </footer>
+
+    </body>
