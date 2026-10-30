@@ -45,7 +45,6 @@ html {
 }
 
 /*cursor*/
-
 a,
 button,
 input,
@@ -117,7 +116,7 @@ p {
 header {
   position: relative;
   height: 60px;
-  padding: 0 120px;
+  padding: 0 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -144,7 +143,7 @@ header > * {
 }
 
 nav a {
-display: inline-block;
+  display: inline-block;
   margin-left: 40px;
   padding-bottom: 3px;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -154,13 +153,13 @@ display: inline-block;
   letter-spacing: 10%;
   text-transform: uppercase;
   color: #ECD2F5;
-  text-decoration: none;
   border-bottom: 3px solid transparent;
   transition: border-color 0.3s ease;
 }
 
-nav a:hover {
-  border-bottom: 3px solid #A74184;
+nav a:hover,
+nav a.activo {
+  border-bottom-color: #A74184;
 }
 
 /* --- FOOTER GENERAL --- */
@@ -207,20 +206,27 @@ footer p {
 /* --- INDEX --- */
 
 body.pagina-inicio {
-  margin: 0;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-main {
-  padding-top: 130px;
+body.pagina-inicio main {
+  flex: 1;
+}
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 40px 20px;
 }
 
-main.hero h2 {
+.hero h2 {
   margin-top: 40px;
   display: flex;
   justify-content: center;
@@ -233,115 +239,99 @@ main.hero h2 {
   height: 30px;
 }
 
+/* boton*/
+
 .boton {
-display: inline-flex;
+  position: relative;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 180px;
   height: 50px;
+  margin: 70px 0 28px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
-  color: #ffffff;
-  text-decoration: none;
-  margin: 70px 0 28px 0;
-  border: 1px solid #ffffff;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
   border-radius: 20px;
   background-color: transparent;
+  transition: background-color 0.3s ease;
 }
 
 .boton:hover {
   background-color: rgba(226, 53, 212, 0.3);
   border-color: #F5E6FA;
-  color: #ffffff;
+}
+
+.boton:hover .boton-borde {
+  display: block;
 }
 
 
 
 
 /* --- PROYECTOS ---*/
-.pagina-proyectos main {
-  padding-top: 0;
-}
-            /* no puedo encontrar la forma de hacer que este header tenga el efecto de multiplicar que tiene el figma :( */
 .pagina-proyectos header {
   position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  height: 60px;
-  padding: 0 120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  z-index: 40;
 
+  background-color: #46095B;
+  background-image:
+    linear-gradient(#B168BD, #D9A3E1),
+    url("images/background.gif");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .pagina-proyectos header::before {
-  content: '';
+  display: none;
+}
+
+/* banner */
+.banner-proyectos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  overflow: hidden;
+}
+
+.banner-proyectos .img-banner {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #46095B;
-  mix-blend-mode: multiply;
-  z-index: 10;
+  object-fit: cover;
+  object-position: center;
 }
 
-.pagina-proyectos header > * {
+.banner-contenido {
   position: relative;
   z-index: 20;
-}
-
-/* banner */
-.pagina-proyectos .banner-proyectos {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.pagina-proyectos .banner-proyectos .img-banner {
-  grid-area: 1 / 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.pagina-proyectos .banner-contenido {
-  grid-area: 1 / 1;
-  align-self: center;
-  justify-self: center;
-  position: relative;
-  z-index: 2;
   width: 100%;
   padding: 20px;
   text-align: center;
 }
 
-.pagina-proyectos .banner-proyectos h2 {
-  margin: 0 0 15px;
-  display: block;
+.banner-proyectos h2 {
+  margin-bottom: 15px;
   font-size: 40px;
-  color: #FFFFFF;
 }
 
-.pagina-proyectos .flores-separador {
+.flores-separador {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
 }
 
-.pagina-proyectos .flores-separador img {
+.flores-separador img {
   width: 18px;
   height: 18px;
 }
@@ -662,6 +652,7 @@ body.pagina-contacto footer {
 
 
 
+
 /*--- SOBRE MI ---*/
 
 body.pagina-sobre-mi {
@@ -830,20 +821,96 @@ body.pagina-sobre-mi .sobre-main {
 
 
 
-
-
-
-
-
-
-
 /*--- RESPONSIVE ---*/
 @media (max-width: 500px) {
+  body {
+    font-size: 16px;
+  }
 
-  /*contacto*/
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  /* header y footer */
+  header {
+    padding: 0 20px;
+  }
+
+  nav a {
+    margin-left: 14px;
+    font-size: 12px;
+  }
+
+  footer {
+    height: auto;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 20px;
+  }
+
+  /* index */
+  .hero {
+    padding: 30px 20px;
+  }
+
+  .hero h2 {
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .boton {
+    margin-top: 40px;
+  }
+
+  /* proyectos */
+  .banner-proyectos {
+    height: 200px;
+  }
+
+  .banner-proyectos h2 {
+    font-size: 30px;
+  }
+
+  .contenedor-proyectos {
+    padding: 40px 20px;
+  }
+
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  .carrusel-img {
+    height: 240px;
+    border-radius: 70px 20px 20px 20px;
+  }
+
+  /* contacto */
+  .contacto-main {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 0 40px;
+  }
+
+  .contacto-video-box {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    padding: 0 20px;
+  }
+
+  .contacto-form-box {
+    max-width: none;
+    margin-top: 30px;
+    padding: 0 20px;
+  }
 
   .contacto-form-box form {
     padding: 40px 20px 20px;
+    border-radius: 20px 70px 20px 20px;
   }
 
   .form-grid {
@@ -858,41 +925,25 @@ body.pagina-sobre-mi .sobre-main {
     margin-top: 20px;
   }
 
-  /*sobre mi*/
-  body.pagina-sobre-mi {
-    min-height: 100vh;
-    height: auto;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
-  body.pagina-sobre-mi .sobre-main {
+  /* sobre mí: una columna */
+  .sobre-main {
     grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
     row-gap: 30px;
     padding: 35px 22px 40px;
   }
 
   .sobre-imagenes {
-    width: min(78vw, 330px);
-    margin: 0 auto;
+    width: 100%;
+    max-width: 330px;
   }
 
   .sobre-texto {
-    width: 100%;
     max-width: none;
-    margin: 0;
-  }
-
-  .sobre-texto article h2 {
-    margin-bottom: 22px;
-  }
-
-  .sobre-descripcion {
-    line-height: 1.6;
+    margin-top: 0;
   }
 
   .sobre-herramientas {
-    justify-content: flex-start;
     gap: 20px;
     margin-top: 25px;
   }
@@ -901,9 +952,9 @@ body.pagina-sobre-mi .sobre-main {
     flex-basis: 34px;
     width: 34px;
     height: 34px;
-    }
+  }
 
-  .sobre-texto article h3 {
+  .sobre-texto h3 {
     margin: 45px 0 18px;
   }
 
