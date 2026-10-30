@@ -29,6 +29,10 @@ Algunos detalles de los que soy muy fan:
 - La **florcita que gira** en "Sobre mí".
 - El cursor personalizado y los hovers en botones y redes.
 
+Detalles técnicos:
+- Tamaño de pantalla con la que trabajé: 1920x1080.
+- Editor de código que utilicé: Visual Studio Code.
+
 ## Tipografías
 
 - **CS Lempo Stamp** para el título principal.
