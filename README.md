@@ -4,6 +4,8 @@ Este es mi portfolio. Soy diseñadora gráfica y estudiante de Diseño y Comunic
 
 🔗 Visitá el sitio: https://zairamartz.github.io/tp1-cv-zaira-martinez/
 
+🔗 Visitá el figma: https://www.figma.com/design/Qwp6lqrSL5CqtzMDkigDeX/Portfolio-Zaira-Martz?node-id=10-71&t=yyBfX9P3PpCaCdzk-1
+
 (Si, reciclé el repo del tp1 🥀)
 
 ---
@@ -20,12 +22,16 @@ Este es mi portfolio. Soy diseñadora gráfica y estudiante de Diseño y Comunic
 Lo armé desde cero:
 - **HTML5** con estructura semántica.
 - **CSS3** en un único archivo (`estilos.css`) para las 4 páginas, con Flexbox, Grid y animaciones.
-- **JavaScript** para los carruseles de la página de proyectos.
+- **JavaScript** para los carruseles de la página de proyectos y para que el formulario de la pagina de proyectos sea funcional.
 
 Algunos detalles de los que soy muy fan:
 - Los **carruseles** de cada proyecto.
 - La **florcita que gira** en "Sobre mí".
-- El cursor personalizado y los hovers en botones y redes.
+- El **cursor personalizado** de la página.
+
+Detalles técnicos:
+- Tamaño de pantalla con la que trabajé: 1920x1080.
+- Editor de código que utilicé: Visual Studio Code.
 
 ## Tipografías
 
