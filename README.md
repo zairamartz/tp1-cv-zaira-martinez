@@ -20,7 +20,7 @@ Este es mi portfolio. Soy diseñadora gráfica y estudiante de Diseño y Comunic
 Lo armé desde cero:
 - **HTML5** con estructura semántica.
 - **CSS3** en un único archivo (`estilos.css`) para las 4 páginas, con Flexbox, Grid y animaciones.
-- **JavaScript** para los carruseles de la página de proyectos.
+- **JavaScript** para los carruseles de la página de proyectos y para que el formulario de la pagina de proyectos sea funcional.
 
 Algunos detalles de los que soy muy fan:
 - Los **carruseles** de cada proyecto.
