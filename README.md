@@ -57,4 +57,4 @@ Si te gustó lo que viste, contame lo que estés buscando:
 
 ---
 
-Hecho con cariño (y un montón de estrés) por Zai Martínez · 2026 ©
+**✿ Hecho con cariño (y un montón de estrés) por Zai Martínez · 2026 © ✿**
