@@ -32,32 +32,33 @@
 
             <section class="contacto-form-box">
                 <h4>Escribime tu idea:</h4>
-            <form action="#" method="POST">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <input type="text" placeholder="Nombre y Apellido *" required>
+                <form id="formulario">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <input type="text" id="nombre" placeholder="Nombre y Apellido *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefono" placeholder="Teléfono *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="E-mail *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="asunto" placeholder="Asunto *" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <textarea id="mensaje" placeholder="Escribe tu mensaje aquí *" rows="5" required></textarea>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Teléfono *" required>
+                    <div class="form-footer">
+                        <p class="campos-obligatorios">*Campos obligatorios</p>
+                        <button type="submit" class="btn-enviar">ENVIAR</button>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="E-mail *" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Asunto *" required>
-                    </div>
-                    <div class="form-group full-width">
-                        <textarea placeholder="Escribe tu mensaje aquí *" rows="5" required></textarea>
-                    </div>
-                </div>
+                    <p class="mensaje-form" id="mensaje-form"></p>
+                </form>
                 
-                <div class="form-footer">
-                    <p class="campos-obligatorios">*Campos obligatorios</p>
-                    <button type="submit" class="btn-enviar">ENVIAR</button>
-                </div>
-            </form>
-        </section>
-    </main>
+            </section>
+        </main>
 
         <footer class="footer">
             <p class="copyright">Todos los derechos reservados. 2026 ©</p>
@@ -74,5 +75,33 @@
             </div>
     </footer>
 
+    <script> 
+        const formulario = document.getElementById("formulario");
+        const aviso = document.getElementById("mensaje-form");
+
+        formulario.addEventListener("submit", (evento) => {
+        evento.preventDefault();
+
+        const nombre = document.getElementById("nombre").value;
+        const telefono = document.getElementById("telefono").value;
+        const email = document.getElementById("email").value;
+        const asunto = document.getElementById("asunto").value;
+        const mensaje = document.getElementById("mensaje").value;
+
+        const cuerpo =
+            mensaje + "\n\n" +
+            "---\n" +
+            "Nombre: " + nombre + "\n" +
+            "Teléfono: " + telefono + "\n" +
+            "E-mail: " + email;
+
+        const enlace =
+            "mailto:mailfalso123@gmail.com" +
+            "?subject=" + encodeURIComponent(asunto) +
+            "&body=" + encodeURIComponent(cuerpo);
+
+        window.location.href = enlace;
+  });
+</script>
     </body>
  </html>
