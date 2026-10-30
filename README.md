@@ -27,7 +27,7 @@ Lo armé desde cero:
 Algunos detalles de los que soy muy fan:
 - Los **carruseles** de cada proyecto.
 - La **florcita que gira** en "Sobre mí".
-- El cursor personalizado y los hovers en botones y redes.
+- El **cursor personalizado** de la página.
 
 Detalles técnicos:
 - Tamaño de pantalla con la que trabajé: 1920x1080.
