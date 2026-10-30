@@ -3,6 +3,7 @@
 Este es mi portfolio. Soy diseñadora gráfica y estudiante de Diseño y Comunicación Visual en la UNLa, y armé este sitio para reunir en un solo lugar un poquito de lo que hago (y porque fue la consigna del tp3 de Computación III).
 
 🔗 Visitá el sitio: https://zairamartz.github.io/tp1-cv-zaira-martinez/
+
 (Si, reciclé el repo del tp1 🥀)
 
 ---
